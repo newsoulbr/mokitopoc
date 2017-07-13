@@ -1,8 +1,8 @@
-package com.pearson.aimswebplus.mokitopoc.service;
+package com.github.newsoulbr.mokitopoc.service;
 
+import com.github.newsoulbr.mokitopoc.DbUnitTests;
+import com.github.newsoulbr.mokitopoc.dto.PersonDto;
 import com.github.springtestdbunit.annotation.DatabaseSetup;
-import com.pearson.aimswebplus.mokitopoc.DbUnitTests;
-import com.pearson.aimswebplus.mokitopoc.dto.PersonDto;
 import org.hamcrest.collection.IsEmptyCollection;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

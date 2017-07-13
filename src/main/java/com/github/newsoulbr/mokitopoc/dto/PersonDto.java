@@ -1,4 +1,4 @@
-package com.pearson.aimswebplus.mokitopoc.dto;
+package com.github.newsoulbr.mokitopoc.dto;
 
 import java.io.Serializable;
 import java.util.Objects;

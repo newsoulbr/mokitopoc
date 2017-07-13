@@ -1,4 +1,4 @@
-package com.pearson.aimswebplus.mokitopoc.model;
+package com.github.newsoulbr.mokitopoc.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

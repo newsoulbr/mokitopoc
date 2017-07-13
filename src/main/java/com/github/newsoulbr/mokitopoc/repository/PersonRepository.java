@@ -1,6 +1,6 @@
-package com.pearson.aimswebplus.mokitopoc.repository;
+package com.github.newsoulbr.mokitopoc.repository;
 
-import com.pearson.aimswebplus.mokitopoc.model.Person;
+import com.github.newsoulbr.mokitopoc.model.Person;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,9 +1,9 @@
-package com.pearson.aimswebplus.mokitopoc.service;
+package com.github.newsoulbr.mokitopoc.service;
 
-import com.pearson.aimswebplus.mokitopoc.model.Person;
-import com.pearson.aimswebplus.mokitopoc.dto.PersonDto;
-import com.pearson.aimswebplus.mokitopoc.repository.PersonRepository;
-import com.pearson.aimswebplus.mokitopoc.util.EntityParser;
+import com.github.newsoulbr.mokitopoc.model.Person;
+import com.github.newsoulbr.mokitopoc.dto.PersonDto;
+import com.github.newsoulbr.mokitopoc.repository.PersonRepository;
+import com.github.newsoulbr.mokitopoc.util.EntityParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

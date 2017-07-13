@@ -1,4 +1,4 @@
-package com.pearson.aimswebplus.mokitopoc;
+package com.github.newsoulbr.mokitopoc;
 
 import com.github.springtestdbunit.TransactionDbUnitTestExecutionListener;
 import org.junit.Test;

@@ -1,7 +1,7 @@
-package com.pearson.aimswebplus.mokitopoc.util;
+package com.github.newsoulbr.mokitopoc.util;
 
-import com.pearson.aimswebplus.mokitopoc.model.Person;
-import com.pearson.aimswebplus.mokitopoc.dto.PersonDto;
+import com.github.newsoulbr.mokitopoc.dto.PersonDto;
+import com.github.newsoulbr.mokitopoc.model.Person;
 
 /**
  * Created by brunoselva on 7/12/17.

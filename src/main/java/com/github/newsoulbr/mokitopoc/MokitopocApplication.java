@@ -1,4 +1,4 @@
-package com.pearson.aimswebplus.mokitopoc;
+package com.github.newsoulbr.mokitopoc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

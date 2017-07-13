@@ -1,4 +1,4 @@
-package com.pearson.aimswebplus.mokitopoc;
+package com.github.newsoulbr.mokitopoc;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

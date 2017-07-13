@@ -1,24 +1,16 @@
-package com.pearson.aimswebplus.mokitopoc.service;
+package com.github.newsoulbr.mokitopoc.service;
 
-import com.github.springtestdbunit.DbUnitTestExecutionListener;
-import com.pearson.aimswebplus.mokitopoc.MokitopocApplicationTests;
-import com.pearson.aimswebplus.mokitopoc.model.Person;
-import com.pearson.aimswebplus.mokitopoc.dto.PersonDto;
-import com.pearson.aimswebplus.mokitopoc.repository.PersonRepository;
-import com.pearson.aimswebplus.mokitopoc.util.EntityParser;
+import com.github.newsoulbr.mokitopoc.dto.PersonDto;
+import com.github.newsoulbr.mokitopoc.model.Person;
+import com.github.newsoulbr.mokitopoc.util.EntityParser;
+import com.github.newsoulbr.mokitopoc.MokitopocApplicationTests;
+import com.github.newsoulbr.mokitopoc.repository.PersonRepository;
 import org.hamcrest.collection.IsEmptyCollection;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.mockito.runners.MockitoJUnitRunner;
-import org.springframework.test.context.TestExecutionListeners;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
-import org.springframework.test.context.support.DirtiesContextTestExecutionListener;
-import org.springframework.test.context.transaction.TransactionalTestExecutionListener;
 
 import java.util.ArrayList;
 import java.util.List;

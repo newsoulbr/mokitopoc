@@ -17,7 +17,7 @@ import javax.transaction.Transactional;
         TransactionDbUnitTestExecutionListener.class})
 public class DbUnitTests extends MokitopocApplicationTests{
 
-    public static final String SAMPLE_DATA="classpath:sampleData.xml";
+    public static final String SAMPLE_DATA="classpath:dbunit/sampleData.xml";
 
     @Test
     public void contextLoads() {

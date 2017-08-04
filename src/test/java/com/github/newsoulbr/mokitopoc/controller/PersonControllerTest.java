@@ -54,8 +54,11 @@ public class PersonControllerTest extends MokitopocApplicationTests{
     @Before
     public void setUp() {
 
+        //Mokito and RestAssured Setup
         MockitoAnnotations.initMocks(this);
+        RestAssuredMockMvc.webAppContextSetup(context);
 
+        //Mock data
         personId = 32L;
         person = new Person(personId,"John","Mayer");
         when(personRepository.findOne(personId)).thenReturn(person);
@@ -70,9 +73,6 @@ public class PersonControllerTest extends MokitopocApplicationTests{
 
         ReflectionTestUtils.setField(personController,
                 "personService", personService);
-
-        MockMvc mockMvc = MockMvcBuilders.webAppContextSetup(context).build();
-        RestAssuredMockMvc.mockMvc(mockMvc);
 
     }
 

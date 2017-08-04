@@ -20,7 +20,13 @@ public class PersonService {
     private PersonRepository personRepository;
 
     public PersonDto getUserName(Long id) {
-       return parsePerson(personRepository.findOne(id));
+        Person person = personRepository.findOne(id);
+        if(person!=null){
+            return parsePerson(person);
+        }else{
+            throw new RuntimeException("Person not found with id "+id);
+        }
+
     }
 
     public List<PersonDto> getUserNames(){

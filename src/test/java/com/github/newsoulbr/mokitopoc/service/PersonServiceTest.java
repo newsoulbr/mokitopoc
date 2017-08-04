@@ -39,15 +39,15 @@ public class PersonServiceTest extends MokitopocApplicationTests{
 
         MockitoAnnotations.initMocks(this);
 
-        personId = Long.valueOf(32);
+        personId = 32L;
         person = new Person(personId,"John","Mayer");
         when(personRepository.findOne(personId)).thenReturn(person);
 
         people=new ArrayList<>();
-        people.add(new Person(Long.valueOf(1),"John","Mayer"));
-        people.add(new Person(Long.valueOf(2),"Stevie","Wonder"));
-        people.add(new Person(Long.valueOf(3),"Eric","Clapton"));
-        people.add(new Person(Long.valueOf(4),"Ringo","Star"));
+        people.add(new Person(1L,"John","Mayer"));
+        people.add(new Person(2L,"Stevie","Wonder"));
+        people.add(new Person(3L,"Eric","Clapton"));
+        people.add(new Person(4L,"Ringo","Star"));
 
         when(personRepository.findAll()).thenReturn(people);
 
@@ -67,7 +67,7 @@ public class PersonServiceTest extends MokitopocApplicationTests{
 
         List<PersonDto> expectedUsers = new ArrayList<>();
 
-        people.stream().forEach(person -> expectedUsers.add(EntityParser.parseEntity(person)));
+        people.forEach(person -> expectedUsers.add(EntityParser.parseEntity(person)));
 
         List<PersonDto> users = personService.getUserNames();
 

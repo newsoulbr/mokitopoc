@@ -1,6 +1,7 @@
 package com.github.newsoulbr.mokitopoc.service;
 
 import com.github.newsoulbr.mokitopoc.dto.PersonDto;
+import com.github.newsoulbr.mokitopoc.exception.PersonServiceException;
 import com.github.newsoulbr.mokitopoc.model.Person;
 import com.github.newsoulbr.mokitopoc.util.EntityParser;
 import com.github.newsoulbr.mokitopoc.MokitopocApplicationTests;
@@ -8,9 +9,11 @@ import com.github.newsoulbr.mokitopoc.repository.PersonRepository;
 import org.hamcrest.collection.IsEmptyCollection;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,7 +57,7 @@ public class PersonServiceTest extends MokitopocApplicationTests{
     }
 
     @Test
-    public void whenUserIdIsProvided_thenRetrievedNameIsCorrect() {
+    public void whenUserIdIsProvided_thenRetrievedNameIsCorrect() throws Exception{
 
         PersonDto actual = personService.getUserName(personId);
         PersonDto expected = EntityParser.parseEntity(person);
@@ -75,6 +78,16 @@ public class PersonServiceTest extends MokitopocApplicationTests{
         assertThat(users.size(),is(4));
         assertThat(users,is(expectedUsers));
 
+    }
+
+    @Test(expected= PersonServiceException.class)
+    public void whenUserIdDoesNotExist() throws Exception {
+        personService.getUserName(2L);
+    }
+
+    @Test(expected= PersonServiceException.class)
+    public void whenUserIdisNull() throws Exception {
+        personService.getUserName(null);
     }
 
 }

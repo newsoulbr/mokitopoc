@@ -15,6 +15,7 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.util.ReflectionTestUtils;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MockMvcBuilder;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
@@ -32,8 +33,6 @@ import static org.mockito.Mockito.when;
  * Created by brunoselva on 8/4/17.
  */
 public class PersonControllerTest extends MokitopocApplicationTests{
-
-    private MockMvc mockMvc;
 
     @Autowired
     private WebApplicationContext context;

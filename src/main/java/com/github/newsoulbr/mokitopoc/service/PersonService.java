@@ -1,5 +1,6 @@
 package com.github.newsoulbr.mokitopoc.service;
 
+import com.github.newsoulbr.mokitopoc.exception.PersonServiceException;
 import com.github.newsoulbr.mokitopoc.model.Person;
 import com.github.newsoulbr.mokitopoc.dto.PersonDto;
 import com.github.newsoulbr.mokitopoc.repository.PersonRepository;
@@ -19,12 +20,15 @@ public class PersonService {
     @Autowired
     private PersonRepository personRepository;
 
-    public PersonDto getUserName(Long id) {
+    public PersonDto getUserName(Long id) throws PersonServiceException {
+        if(id==null){
+            throw new PersonServiceException("Please inform a valid id");
+        }
         Person person = personRepository.findOne(id);
         if(person!=null){
             return parsePerson(person);
         }else{
-            throw new RuntimeException("Person not found with id "+id);
+            throw new PersonServiceException("Person not found with id "+id);
         }
 
     }

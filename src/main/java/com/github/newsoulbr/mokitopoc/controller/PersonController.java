@@ -1,6 +1,7 @@
 package com.github.newsoulbr.mokitopoc.controller;
 
 import com.github.newsoulbr.mokitopoc.dto.PersonDto;
+import com.github.newsoulbr.mokitopoc.exception.PersonServiceException;
 import com.github.newsoulbr.mokitopoc.model.Person;
 import com.github.newsoulbr.mokitopoc.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,7 @@ public class PersonController {
     PersonService personService;
 
     @RequestMapping("/{id}")
-    public PersonDto getPersonById(@PathVariable("id") Long id){
+    public PersonDto getPersonById(@PathVariable("id") Long id) throws PersonServiceException{
         return personService.getUserName(id);
     }
 

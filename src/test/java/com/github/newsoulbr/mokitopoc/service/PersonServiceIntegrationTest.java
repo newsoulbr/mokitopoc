@@ -2,6 +2,7 @@ package com.github.newsoulbr.mokitopoc.service;
 
 import com.github.newsoulbr.mokitopoc.dto.PersonDto;
 import com.github.newsoulbr.mokitopoc.MokitopocApplicationTests;
+import com.github.newsoulbr.mokitopoc.exception.PersonServiceException;
 import org.hamcrest.collection.IsEmptyCollection;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,7 @@ public class PersonServiceIntegrationTest extends MokitopocApplicationTests{
     private PersonService personService;
 
     @Test
-    public void whenUserIdIsProvided_thenRetrievedNameIsCorrect() {
+    public void whenUserIdIsProvided_thenRetrievedNameIsCorrect() throws PersonServiceException{
         PersonDto expected = new PersonDto("Peter Gregory","1");
         PersonDto actual = personService.getUserName(Long.valueOf(1));
         assertThat(actual,is(expected));
